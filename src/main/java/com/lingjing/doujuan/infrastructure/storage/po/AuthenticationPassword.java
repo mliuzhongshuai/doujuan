@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("authentication_password")
 public class AuthenticationPassword {
+
     @TableId(type = IdType.AUTO)
     private Integer id;
 
@@ -28,4 +29,5 @@ public class AuthenticationPassword {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
+
 }

@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/setting")
 public class SettingController {
 
+    //这个方法获取被监测人员的基本信息
+    public void getSetting(String userId){
+
+
+    }
+
 
 
 

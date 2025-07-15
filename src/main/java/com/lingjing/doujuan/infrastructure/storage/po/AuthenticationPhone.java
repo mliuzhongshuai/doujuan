@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("authentication_phone")
 public class AuthenticationPhone {
+
     @TableId(type = IdType.AUTO)
     private Integer id;
 

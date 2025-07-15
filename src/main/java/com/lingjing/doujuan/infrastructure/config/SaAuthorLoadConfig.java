@@ -18,4 +18,9 @@ public class SaAuthorLoadConfig implements StpInterface {
     public List<String> getRoleList(Object loginId, String loginType) {
         return List.of("user");
     }
+
+    //安全检测，用于标识连接是否安全
+    public boolean isSafe(){
+        return true;
+    }
 }

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-
     @ExceptionHandler(NotLoginException.class)
     public ApiResult<String> handleNotLoginException(HttpServletRequest request, NotLoginException e) {
         log.error("未登录异常", e);
