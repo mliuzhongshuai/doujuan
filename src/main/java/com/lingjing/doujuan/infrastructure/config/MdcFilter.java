@@ -12,6 +12,7 @@ import java.util.UUID;
 @WebFilter(filterName = "MdcFilter", urlPatterns = "/*")
 public class MdcFilter implements Filter {
 
+
     // 自定义字段名
     private static final String CUSTOM_FIELD = "traceId";
 

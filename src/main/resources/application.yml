@@ -14,6 +14,17 @@ spring:
       idle-timeout: 30000
       max-lifetime: 1800000
       connection-timeout: 30000
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
 
 sa-token:
   token-name: Authentication
@@ -23,3 +34,19 @@ sa-token:
   is-share: false
   token-style: uuid
   is-log: true
+
+# 阿里云SMS配置
+aliyun:
+  sms:
+    enabled: false
+    access-key-id: ${ALIYUN_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_ACCESS_KEY_SECRET:}
+    sign-name: ${ALIYUN_SMS_SIGN_NAME:}
+    template-code: ${ALIYUN_SMS_TEMPLATE_CODE:}
+
+# 短信验证码配置
+sms:
+  code:
+    length: 6
+    expire-minutes: 10
+    send-interval-seconds: 60
