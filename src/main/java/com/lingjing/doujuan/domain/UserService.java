@@ -29,11 +29,9 @@ public class UserService {
      */
     public void modifyUserInfo(int userId, String nickName, String avatar, String realName, String gender, String birthDate) {
         User user = userRepository.selectById(userId);
-
         if (user == null) {
             throw new IllegalArgumentException(ErrorMessage.USER_NOT_FOUND);
         }
-
         if (nickName != null) {
             user.setNickName(nickName);
         }

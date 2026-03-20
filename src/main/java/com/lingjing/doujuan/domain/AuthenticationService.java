@@ -48,13 +48,13 @@ public class AuthenticationService {
         verificationCodeService.verifyCode(phone, code);
         // 创建用户基本信息
         User user = new User();
-        user.setNickName("User_" + phone.substring(phone.length() - 4));
         userRepository.insert(user);
         // 创建账户记录
         Accounts accounts = new Accounts();
         accounts.setUserId(user.getId());
         accounts.setAccountStatus(AccountStatus.ACTIVE.getValue());
         accounts.setLastLoginTime(LocalDateTime.now());
+        //accounts.setNickName("User_" + phone.substring(phone.length() - 4));
         accountsRepository.insert(accounts);
         // 绑定手机号认证信息
         AuthenticationPhone authPhone = new AuthenticationPhone();
