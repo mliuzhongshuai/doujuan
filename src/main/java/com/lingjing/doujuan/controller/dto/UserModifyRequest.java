@@ -12,7 +12,7 @@ public class UserModifyRequest {
     @Pattern(regexp = "^https?://.*", message = "头像必须是有效的URL")
     private String avatar;
 
-    @Size(min = 1, max = 100, message = "真实姓名长度应为1-100个字符")
+    @Size(min = 2, max = 10, message = "姓名长度非法")
     private String realName;
 
     @Pattern(regexp = "^(男|女|其他)$", message = "性别必须是男、女或其他")

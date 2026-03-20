@@ -76,3 +76,6 @@ CREATE TABLE IF NOT EXISTS `contact_info` (
     INDEX `idx_contact_type` (`contact_type`),
     FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户联系方式表';
+
+
+

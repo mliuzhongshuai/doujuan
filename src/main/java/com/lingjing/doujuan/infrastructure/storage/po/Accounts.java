@@ -12,6 +12,10 @@ public class Accounts {
 
     private Integer userId;
 
+    private String nickName;
+
+    private String avatar;
+
     private String accountStatus;
 
     private LocalDateTime lastLoginTime;
